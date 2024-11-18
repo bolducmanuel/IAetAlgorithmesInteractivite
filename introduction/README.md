@@ -11,5 +11,5 @@ Les scripts dans le dossier sont les suivants:
 
 Pour aller plus loin dans l'exploration des scripts de base: 
 
-*[Ultralytics YOLOv8](https://docs.ultralytics.com/models/yolov8/) : pour tester différentes modalités de détection dans le script test_yolo.py
-*[MediaPipe Solutions guide](https://ai.google.dev/edge/mediapipe/solutions/guide): pour voir quelles modalités de détection sont disponible dans l'architecture mediapipe
+* [Ultralytics YOLOv8](https://docs.ultralytics.com/models/yolov8/) : pour tester différentes modalités de détection dans le script test_yolo.py
+* [MediaPipe Solutions guide](https://ai.google.dev/edge/mediapipe/solutions/guide): pour voir quelles modalités de détection sont disponible dans l'architecture mediapipe
