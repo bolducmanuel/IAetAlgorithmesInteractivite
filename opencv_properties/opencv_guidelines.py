@@ -1,17 +1,29 @@
 import cv2
-
+import numpy as np
 
 ## pour ouvrir une caméra
 cap = cv2.VideoCapture(0) #normalement, la webcam
 
 #cap = cv2.VideoCapture(1) # une deuxième caméra USB connectée à l'ordi
 
-cap = cv2.VideoCapture('/home/metalab_legion/Videos/blobtracking_demo/test_video.mp4')
+cap = cv2.VideoCapture('/home/metalab_legion/Videos/blobtracking_demo/Bruno_with_light.mp4')
 
 
 ## algorithmes pour la soustraction d'arrière-plans dynamique
 backSub1 = cv2.createBackgroundSubtractorMOG2()
 backSub2 = cv2.createBackgroundSubtractorKNN()
+
+frame_count = 0
+
+## OPERATION POUR MASQUER UNE IMAGE ##
+# image = cv2.imread('frame_ex.jpg')
+# mask  = np.zeros(image.shape[:2], dtype = "uint8")
+# cv2.circle(mask, (360, 360), 200, 255, -1)
+# masked = cv2.bitwise_and(image, image, mask = mask)
+
+# cv2.imshow("masked", masked)
+# cv2.waitKey(0)
+
 
 while cap.isOpened():
 
@@ -57,6 +69,11 @@ while cap.isOpened():
         break
 
     #cv2.waitKey(30) #pour rajouter un délai sur l'exécution de la boucle while
+
+    if frame_count == 0:
+
+        cv2.imwrite('frame_ex.jpg', frame)
+        frame_count += 1
 
 cap.release()
 cv2.destroyAllWindows()
