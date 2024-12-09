@@ -5,6 +5,13 @@ import math
 from osc4py3.as_eventloop import *
 from osc4py3 import oscbuildparse
 
+nice_notes = {
+    -1 : 0,
+    0 : 130.813,
+    1 : 164.814,
+    2 : 195.998,
+    3: 246.942
+}
 
 def is_in_zone(keypoints, zone_centers = [[250,250],[500, 250], [500,500],[250, 500]], zone_rad = [50, 50, 50, 50]):
 
